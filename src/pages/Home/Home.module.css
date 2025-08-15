@@ -1,0 +1,160 @@
+/* Home.module.css */
+.home {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/src/assets/home.png") center/cover no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  animation: fadeIn 1s ease;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideUp 0.8s ease;
+}
+
+.heroTitle span {
+  color: #4caf50;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: slideUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.heroButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #4caf50;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  animation: slideUp 0.8s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.heroButton:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #4caf50;
+  margin: 1rem auto 0;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.seeMore {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.seeMoreLink {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.seeMoreLink:hover {
+  color: #45a049;
+}
+
+.seeMoreLink::after {
+  content: "→";
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.seeMoreLink:hover::after {
+  transform: translateX(5px);
+}
+
+.testimonialsSection {
+  background: #f9f9f9;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+}

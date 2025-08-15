@@ -1,0 +1,73 @@
+/* TestimonialCard.module.css */
+.testimonialCard {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialContent {
+  margin-bottom: 1.5rem;
+}
+
+.testimonialText {
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonialText::before,
+.testimonialText::after {
+  content: '"';
+  color: #4caf50;
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.authorName {
+  margin: 0 0 0.2rem 0;
+  color: #333;
+}
+
+.authorRole {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star {
+  color: #e1e1e1;
+}
+
+.star.filled {
+  color: #ffc107;
+}
