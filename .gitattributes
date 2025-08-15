@@ -1,0 +1,11 @@
+# Tell GitHub Linguist to ignore build artifacts
+dist/* linguist-generated
+
+# Ignore node modules
+node_modules/* linguist-generated
+
+# Ignore lock files
+package-lock.json linguist-generated
+
+# Ignore any transpiled JS (if you ever output compiled files into src)
+src/**/*.min.js linguist-generated
