@@ -5,7 +5,7 @@
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/src/assets/products.jpg") center/cover no-repeat;
+    url("/src/assets/products.png") bottom center/cover no-repeat;
   height: 300px;
   display: flex;
   flex-direction: column;

@@ -19,26 +19,26 @@ const Home = () => {
       name: "Wireless Headphones",
       price: 99.99,
       discount: 15,
-      image: "/src/assets/image-1.jpg",
+      image: "../src/assets/image-1.jpg",
     },
     {
       id: 2,
       name: "Smart Watch",
       price: 199.99,
       discount: 10,
-      image: "/src/assets/image-2.jpg",
+      image: "../src/assets/image-2.jpg",
     },
     {
       id: 3,
       name: "Bluetooth Speaker",
       price: 79.99,
-      image: "/src/assets/image-3.jpg",
+      image: "../src/assets/image-3.jpg",
     },
     {
       id: 4,
       name: "Laptop Backpack",
       price: 49.99,
-      image: "src/assets/image-4.jpg",
+      image: "../src/assets/image-4.jpg",
     },
   ];
 
@@ -50,7 +50,7 @@ const Home = () => {
       content:
         "I love shopping at Apni Mart! The products are high quality and the delivery is always fast.",
       rating: 5,
-      image: "/src/assets/man-1.jpg",
+      image: "../src/assets/man-1.jpg",
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ const Home = () => {
       content:
         "Great selection of electronics at competitive prices. Highly recommend!",
       rating: 4,
-      image: "/src/assets/man-2.jpg",
+      image: "../src/assets/man-2.jpg",
     },
     {
       id: 3,
@@ -68,7 +68,7 @@ const Home = () => {
       content:
         "Excellent customer service. They helped me find exactly what I was looking for.",
       rating: 5,
-      image: "/src/assets/man-3.jpg",
+      image: "../src/assets/man-3.jpg",
     },
   ];
 

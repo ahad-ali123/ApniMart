@@ -56,7 +56,7 @@ const Contact = () => {
 
               <div className={styles.infoItem}>
                 <h3>Address</h3>
-                <p>123 Shop Street, Commerce City, CC 12345</p>
+                <p>123 Shop Street, Swabi City, CC 12345</p>
               </div>
 
               <div className={styles.infoItem}>
@@ -66,7 +66,7 @@ const Contact = () => {
 
               <div className={styles.infoItem}>
                 <h3>Phone</h3>
-                <p>(123) 456-7890</p>
+                <p>(+92) 3195345759</p>
               </div>
             </div>
 
