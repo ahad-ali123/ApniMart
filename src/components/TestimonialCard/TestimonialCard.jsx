@@ -1,5 +1,3 @@
-// TestimonialCard.jsx
-// TestimonialCard.jsx
 import styles from "./TestimonialCard.module.css";
 
 const TestimonialCard = ({ testimonial }) => {

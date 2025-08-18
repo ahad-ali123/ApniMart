@@ -3,6 +3,16 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import { useCart } from "../../context/CartContext";
 import styles from "./Products.module.css";
 
+// ✅ Import product images
+import img1 from "../../assets/image-1.jpg";
+import img2 from "../../assets/image-2.jpg";
+import img3 from "../../assets/image-3.jpg";
+import img4 from "../../assets/image-4.jpg";
+import img5 from "../../assets/image-5.jpg";
+import img6 from "../../assets/image-6.jpg";
+import img7 from "../../assets/image-7.jpg";
+import img8 from "../../assets/image-8.jpg";
+
 const Products = () => {
   const { addToCart } = useCart();
   const [products, setProducts] = useState([]);
@@ -16,7 +26,6 @@ const Products = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        // In a real app, you would fetch from an API
         const dummyProducts = [
           {
             id: 1,
@@ -24,7 +33,7 @@ const Products = () => {
             price: 99.99,
             discount: 15,
             category: "electronics",
-            image: "./src/assets/image-1.jpg",
+            image: img1,
           },
           {
             id: 2,
@@ -32,28 +41,28 @@ const Products = () => {
             price: 199.99,
             discount: 10,
             category: "electronics",
-            image: "./src/assets/image-2.jpg",
+            image: img2,
           },
           {
             id: 3,
             name: "Bluetooth Speaker",
             price: 79.99,
             category: "electronics",
-            image: "./src/assets/image-3.jpg",
+            image: img3,
           },
           {
             id: 4,
             name: "Laptop Backpack",
             price: 49.99,
             category: "accessories",
-            image: "./src/assets/image-4.jpg",
+            image: img4,
           },
           {
             id: 5,
             name: "Wireless Mouse",
             price: 29.99,
             category: "electronics",
-            image: "./src/assets/image-5.jpg",
+            image: img5,
           },
           {
             id: 6,
@@ -61,24 +70,23 @@ const Products = () => {
             price: 39.99,
             discount: 5,
             category: "home",
-            image: "./src/assets/image-6.jpg",
+            image: img6,
           },
           {
             id: 7,
             name: "Water Bottle",
             price: 19.99,
             category: "accessories",
-            image: "./src/assets/image-7.jpg",
+            image: img7,
           },
           {
             id: 8,
             name: "Notebook Set",
             price: 14.99,
             category: "stationery",
-            image: "./src/assets/image-8.jpg",
+            image: img8,
           },
         ];
-
         setProducts(dummyProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -105,46 +113,21 @@ const Products = () => {
       <section className={styles.content}>
         <div className={styles.container}>
           <div className={styles.filterControls}>
-            <button
-              className={`${styles.filterButton} ${
-                filter === "all" ? styles.active : ""
-              }`}
-              onClick={() => setFilter("all")}
-            >
-              All Products
-            </button>
-            <button
-              className={`${styles.filterButton} ${
-                filter === "electronics" ? styles.active : ""
-              }`}
-              onClick={() => setFilter("electronics")}
-            >
-              Electronics
-            </button>
-            <button
-              className={`${styles.filterButton} ${
-                filter === "accessories" ? styles.active : ""
-              }`}
-              onClick={() => setFilter("accessories")}
-            >
-              Accessories
-            </button>
-            <button
-              className={`${styles.filterButton} ${
-                filter === "home" ? styles.active : ""
-              }`}
-              onClick={() => setFilter("home")}
-            >
-              Home
-            </button>
-            <button
-              className={`${styles.filterButton} ${
-                filter === "stationery" ? styles.active : ""
-              }`}
-              onClick={() => setFilter("stationery")}
-            >
-              Stationery
-            </button>
+            {["all", "electronics", "accessories", "home", "stationery"].map(
+              (cat) => (
+                <button
+                  key={cat}
+                  className={`${styles.filterButton} ${
+                    filter === cat ? styles.active : ""
+                  }`}
+                  onClick={() => setFilter(cat)}
+                >
+                  {cat === "all"
+                    ? "All Products"
+                    : cat.charAt(0).toUpperCase() + cat.slice(1)}
+                </button>
+              )
+            )}
           </div>
 
           {loading ? (

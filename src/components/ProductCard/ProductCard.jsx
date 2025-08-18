@@ -1,5 +1,3 @@
-// ProductCard.jsx
-// ProductCard.jsx
 import { useState, useRef } from "react";
 import styles from "./ProductCard.module.css";
 
